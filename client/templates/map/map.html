@@ -1,0 +1,17 @@
+<template name="map">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+      <h1 class="title">Map</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+        <button class="button">我在这里</button>
+        <div id="allmap"></div>
+
+    {{/ionContent}}
+  {{/ionView}}
+</template>

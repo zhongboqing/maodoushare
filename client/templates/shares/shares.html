@@ -1,0 +1,58 @@
+<template name="shares">
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton path="index"}}
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Photo Shares</h1>
+    {{/contentFor}}
+
+    {{#contentFor "headerButtonRight"}}
+        <button class="button button-clear pull-right" data-ion-modal="newShare">
+            {{> ionIcon icon='ios-plus-empty'}}
+        </button>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            {{#each shares}}
+                <div class="list card">
+                    <div class="item item-avatar">
+                        <img src="images/mcfly.jpg">
+                        <h2>Marty McFly</h2>
+                        <p>{{createdAt}}</p>
+                    </div>
+
+                    <div class="item item-body">
+                        {{#each fileIds}}
+                        <img class="small-image" src="/cfs/files/uploads/{{this}}?store=thumbs">
+                        {{/each}}
+                        <p>
+                            {{txt}}
+                        </p>
+                        <p>
+                            <a href="#" class="subdued">1 Like</a>
+                            <a href="#" class="subdued">5 Comments</a>
+                        </p>
+                    </div>
+
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item" href="#">
+                            <i class="icon ion-thumbsup"></i>
+                            Like
+                        </a>
+                        <a class="tab-item" href="#">
+                            <i class="icon ion-chatbox"></i>
+                            Comment
+                        </a>
+                        <a class="tab-item" href="#">
+                            <i class="icon ion-share"></i>
+                            Share
+                        </a>
+                    </div>
+
+                </div>
+            {{/each}}
+        {{/ionContent}}
+    {{/ionView}}
+</template>

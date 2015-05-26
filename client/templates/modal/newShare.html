@@ -1,0 +1,37 @@
+<template name="newShare">
+    {{#ionModal title="新建分享"}}
+        <div class="padding">
+            <div class="list">
+                <form>
+                    <label class="item item-input">
+                        <textarea name="txt" rows="5" placeholder="写点什么吧！"></textarea>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">照片</span>
+
+                        <div class="button-bar">
+								<span title="拍照" class="fileinput-button">
+									<a title="拍照" class="button icon ion-android-camera">+</a>
+								</span>
+                                <span title="选择照片" class="fileinput-button">
+									<i title="选择照片" class="button icon ion-android-image">+</i>
+									<!-- The file input field used as target for the file upload widget -->
+									<input class="fileInput" name="files" id="fileupload" title="选择照片" type="file"
+                                           multiple>
+								</span>
+                        </div>
+                    </label>
+                    <label class="item item-input">
+                        <div id="previewImageList">
+
+                        </div>
+                    </label>
+
+                    <div class="padding">
+                        <button type="submit" class="btn button button-positive button-block submit">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {{/ionModal}}
+</template>
