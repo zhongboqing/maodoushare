@@ -1,16 +1,10 @@
-![](http://f.cl.ly/items/391y4708420P0H001k1G/meteoric.png)
+#地图定位、照片分享
 
-# Meteor Ionic Demo
+This is a demo:
 
-This is a demo of the various [Meteoric](https://github.com/meteoric) packages:
+百度地图集成 …
+照片分享，拍照，选择相册照片上传，并生成缩略图
 
-- [meteoric:ionic](https://github.com/meteoric/meteor-ionic)
-- [meteoric:ionic-sass](https://github.com/meteoric/ionic-sass)
-- [meteoric:ionicons-sass](https://github.com/meteoric/ionicons-sass)
-- [meteoric:autoform-ionic](https://github.com/meteoric/autoform-ionic)
-- [meteoric:useraccounts-ionic](https://github.com/meteoric/useraccounts-ionic)
-
-See it in action here: [meteoric.github.io](http://meteoric.github.io)
 
 ## License
 [MIT License](https://github.com/meteoric/demo/blob/master/LICENSE)
