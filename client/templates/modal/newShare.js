@@ -3,13 +3,13 @@
  */
 var fileObjects = [];
 
-Template.newShare.onRendered(function(){
-    fileObjects=[];
+Template.newShare.onRendered(function () {
+    fileObjects = [];
 });
 
 Template.newShare.events({
-
-    'click .ion-android-camera': function (evevt, template) {
+    'click .ion-android-camera': function (event, template) {
+        event.preventDefault();
         MeteorCamera.getPicture({width: 1024, height: 768, quality: 100}, function (e, r) {
             if (e) {
                 console.log(e);
@@ -21,8 +21,9 @@ Template.newShare.events({
             }
         });
     },
-    'change .fileInput': function (evevt, template) {
-         FS.Utility.eachFile(event, function (file) {
+    'change .fileInput': function (event, template) {
+        event.preventDefault();
+        FS.Utility.eachFile(event, function (file) {
             var newFile = new FS.File(file);
             fileObjects.push(newFile);
             var reader = new FileReader();
@@ -34,7 +35,7 @@ Template.newShare.events({
     },
     'submit form': function (event, template) {
         event.preventDefault();
-         var txt = template.$('[name=txt]').val();
+        var txt = template.$('[name=txt]').val();
         var fileIds = [];
         //IonLoading.show({customTemplate: '<h3>Loading…</h3><p>正在上传照片，请稍候....</p>'});
         _.each(fileObjects, function (fo) {
@@ -46,7 +47,7 @@ Template.newShare.events({
         Shares.insert({
             txt: txt,
             fileIds: fileIds,
-            createdAt:new Date()
+            createdAt: new Date()
         });
         //IonLoading.hide();
         IonModal.close();

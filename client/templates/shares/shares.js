@@ -10,7 +10,7 @@ Template.shares.helpers({
 
 Template.shareItem.helpers({
     uploads:function(){
-        console.log(this.fileIds);
+        //console.log(this.fileIds);
         return Uploads.find({_id:{$in:this.fileIds}});
     }
 });
