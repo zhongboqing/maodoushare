@@ -3,6 +3,9 @@
  */
 var fileObjects = [];
 
+Template.newShare.onRendered(function(){
+    fileObjects=[];
+});
 
 Template.newShare.events({
 
